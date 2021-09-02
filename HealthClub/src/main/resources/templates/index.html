@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+<title>Insert title here</title>
+</head>
+<body id="indexbody">
+
+	<div th:replace=" fragments/header :: navbar"></div>
+
+	<div id="container">
+		<h3>Member Registration</h3>
+		<form action="register" method="post">
+
+			<label class="form-label">Name</label> <input type="text" name="name"
+				required="required" class="form-control"><br> <label
+				class="form-label">Email address</label> <input type="email"
+				name="email" required="required" class="form-control"><br>
+
+			<label class="form-label">Password</label> <input type="password"
+				name="password" required="required" class="form-control"><br>
+
+			<input type="submit" value="Register" class="btn btn-primary">
+		</form>
+		<br>
+
+
+		<h3>Member Login</h3>
+		<form action="login" method="post">
+
+			<label class="form-label">Email address</label> <input type="email"
+				name="email" required="required" class="form-control"><br>
+
+			<label class="form-label">Password</label> <input type="password"
+				name="password" required="required" class="form-control"><br>
+
+			<input type="submit" value="Login" class="btn btn-primary">
+		</form>
+		<br>
+
+	</div>
+
+
+	<a href="adminindex.html" th:href="@{adminindex}">Click to
+		Login/Register as Admin</a>
+
+
+
+	<div class="row banner" id="features">
+		<div class="display-5" id="featuresbar">FEATURES</div>
+		
+		<div class="col-6 col-md-4">
+			<span class="display-6">Personal Training</span><img
+				class="imgmargin" src="/images/personaltraining.jpg" width="300px"
+				height="200px" alt="" />
+		</div>
+		<div class="col-6 col-md-4">
+			<span class="display-6">Quality Equipment</span><img
+				class="imgmargin" src="/images/qualityequipment.jpg" width="300px"
+				height="200px" alt="">
+		</div>
+		<div class="col-6 col-md-4">
+			<span class="display-6">Affordable Price</span><img class="imgmargin"
+				src="/images/affordable.jpg" width="300px" height="200px" alt="">
+		</div>
+	</div>
+
+
+
+	<div th:replace="
+				fragments/footer ::footer"></div>
+
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>

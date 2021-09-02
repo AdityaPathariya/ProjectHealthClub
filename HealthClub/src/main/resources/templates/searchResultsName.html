@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<title>Insert title here</title>
+</head>
+<body>
+
+	<div th:replace=" fragments/header :: navbar"></div>
+	
+
+<!-- For Handling No records found for Name search -->
+
+	<div th:if="${#lists.isEmpty(namelistobj)}">
+		<h1>No records found</h1>
+	</div>
+
+	<div th:if="${not #lists.isEmpty(namelistobj)}">
+		<table class="table" style="text-align: center">
+			<caption style="text-align: center">Find By Name Table</caption>
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th>Email</th>
+			</tr>
+			<tr th:each="Member : ${namelistobj}">
+				<td th:text="${Member.id}"></td>
+				<td th:text="${Member.name}"></td>
+				<td th:text="${Member.email}"></td>
+			</tr>
+		</table>
+	</div>
+	
+<!-- End of Handling No records found for Name search  -->
+	
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	
+</body>
+</html>

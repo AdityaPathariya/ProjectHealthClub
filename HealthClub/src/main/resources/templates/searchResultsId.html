@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<title>Insert title here</title>
+</head>
+<body>
+
+	<div th:replace=" fragments/header :: navbar"></div>
+
+	<!-- For Handling No records found for Id search -->
+
+	<div th:if="${idsearchobj.id == null}">
+		<h1>No records found</h1>
+	</div>
+
+	<div th:if="${idsearchobj.id != null}">
+		<table class="table" style="text-align: center">
+			<caption style="text-align: center">Find By ID Table</caption>
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th>Email</th>
+			</tr>
+			<tr>
+				<td th:text="${idsearchobj.id}"></td>
+				<td th:text="${idsearchobj.name}"></td>
+				<td th:text="${idsearchobj.email}"></td>
+			</tr>
+		</table>
+	</div>
+
+	<!-- End of Handling No records found for Id search  -->
+
+
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>

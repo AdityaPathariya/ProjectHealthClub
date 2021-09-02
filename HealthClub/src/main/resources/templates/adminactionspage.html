@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<title>Insert title here</title>
+</head>
+<body>
+
+	<div th:replace=" fragments/header :: navbar"></div>
+
+	<h1>Login successful !!</h1>
+	<br>
+	<br>
+
+	<!-- 	To be rectified after registration then action page -->
+	<!-- 		<h1> <span>Welcome </span><span th:text="${adminobj.name}"></span></h1> <br><br> -->
+
+	<a href="memberrecords.html" th:href="@{viewmembers}"><h3>View
+			All Member records</h3></a>
+	<br>
+	<br>
+
+	<a href="adminrecords.html" th:href="@{viewadmins}"><h3>View
+			All Admin records</h3></a>
+	<br>
+	<br>
+
+	<form action="searchMembersByName">
+		<label class="form-label">Search Member by Name</label> <input
+			type="text" name="name" required="required" class="form-control"><br>
+		<input type="submit" value="Search" class="btn btn-outline-primary">
+	</form>
+	<br>
+
+
+	<form action="searchMemberById">
+		<label class="form-label">Search Member by ID</label> <input
+			type="number" name="id" required="required" class="form-control"><br>
+		<input type="submit" value="Search" class="btn btn-outline-primary">
+	</form>
+	<br>
+	<form action="searchMemberByEmail">
+		<label class="form-label">Search Member by Email</label> <input
+			type="email" name="email" required="required" class="form-control"><br>
+		<input type="submit" value="Search" class="btn btn-outline-primary">
+	</form>
+	<br>
+
+	<form action="updateMemberById">
+		<label class="form-label">Enter Member ID to update record</label> <input
+			type="number" name="id" required="required" class="form-control"><br>
+		<input type="submit" value="Search" class="btn btn-outline-primary">
+	</form>
+	<br>
+
+	<form action="deleteMemberById">
+		<label class="form-label">Delete Member by ID</label> <input
+			type="number" name="id" required="required" class="form-control"><br>
+		<input type="submit" value="DELETE" class="btn btn-outline-danger">
+	</form>
+	<br>
+
+	<form action="updateAdminById">
+		<label class="form-label">Enter Admin ID to update record</label> <input
+			type="number" name="id" required="required" class="form-control"><br>
+		<input type="submit" value="Search" class="btn btn-outline-primary">
+	</form>
+	<br>
+
+	<div th:replace="
+				fragments/footer ::footer"></div>
+
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

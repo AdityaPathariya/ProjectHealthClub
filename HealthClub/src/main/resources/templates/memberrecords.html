@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<title>Member Records</title>
+</head>
+<body>
+
+	<div th:replace=" fragments/header :: navbar"></div>
+	
+	<table class="table" style="text-align: center">
+		<thead>
+			<tr>
+				<th scope="col">ID</th>
+				<th scope="col">Name</th>
+				<th scope="col">Email</th>
+			</tr>
+		</thead>
+		<tr th:each="element : ${listmember}">
+			<td th:text="${element.id}"></td>
+			<td th:text="${element.name}"></td>
+			<td th:text="${element.email}"></td>
+		</tr>
+	</table>
+
+	<div th:replace="
+				fragments/footer ::footer"></div>
+	
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

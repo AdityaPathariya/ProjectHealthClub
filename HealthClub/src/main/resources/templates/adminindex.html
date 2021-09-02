@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="/css/bootstrap.min.css" />
+<link rel="stylesheet" href="/css/style.css" />
+<title>Insert title here</title>
+</head>
+<body id="adminindexbody">
+
+	<div th:replace=" fragments/header :: navbar"></div>
+
+	<div id="container">
+		<h3>Admin Registration</h3>
+		<form action="adminregister" method="post">
+			<label class="form-label">Name</label> <input type="text" name="name"
+				required="required" class="form-control"><br> <label
+				class="form-label">Email address</label> <input type="email"
+				name="email" required="required" class="form-control"><br>
+
+			<label class="form-label">Password</label> <input type="password"
+				name="password" required="required" class="form-control"><br>
+
+			<input type="submit" value="Register" class="btn btn-primary">
+		</form>
+		<br>
+
+		<h3>Admin Login</h3>
+		<form action="adminlogin" method="post">
+
+			<label class="form-label">Email address</label> <input type="text"
+				name="email" required="required" class="form-control"><br>
+
+			<label class="form-label">Password</label> <input type="password"
+				name="password" required="required" class="form-control"><br>
+
+			<input type="submit" value="Login" class="btn btn-primary">
+		</form>
+		<br>
+	</div>
+
+	<a href="index.html" th:href="@{/}">Click to Login/Register as
+		Member</a>
+		
+	<div th:replace=" fragments/footer :: footer"></div>
+
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

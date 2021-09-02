@@ -1,0 +1,74 @@
+#indexbody {
+	color: white;
+	background-image: url('/images/gym1.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover
+}
+
+#adminindexbody {
+	color: white;
+	background-image: url('/images/gym4.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover
+}
+
+input[type="text"] {
+	background: transparent;
+}
+
+input[type="email"] {
+	background: transparent;
+}
+
+input[type="password"] {
+	background: transparent;
+}
+
+#container {
+	width: 40%;
+	height: 40%;
+	margin-left: 4%;
+	margin-top: 4%;
+}
+
+.form-control {
+	color: #f8f9fa;
+}
+
+#pageMargin {
+	margin-top: 40px;
+	margin-left: 40px;
+}
+
+footer {
+	margin-top: 100px;
+	background-color: #091c21;
+	opacity: 0.9;
+}
+
+.banner {
+	font-family: var(- -bs-body-font-family);
+	opacity: 0.9;
+	background-color: #0d121a;
+	margin-top: 100px;
+	margin-bottom: 50px;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding-left: 150px;
+	padding-bottom: 30px;
+	padding-right: 30px;
+	padding-top: 30px;
+}
+
+.imgmargin {
+	margin-top: 20px;
+}
+
+#featuresbar {
+	margin-bottom: 40px;
+	background-color: #black;
+}
